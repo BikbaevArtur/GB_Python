@@ -69,7 +69,34 @@
 d = {} # создание словаря
 d = dict() # создание словаря 
 d['q'] = 'qwerty'
-print(d)
+# print(d)
 d['w'] = 'werty'
-print(d)
-print(d['q']) # 
+# print(d)
+# print(d['q']) # 
+# del d['q'] # deleted key d 
+# for i in d:
+#     print('{}:{}' .format(i,d[i])) # 
+# #так де можно 
+# for (kay,val) in d.items():
+#     print(kay,val)
+
+#  Множество содержит в себе уникальные элементы, не обязательно упорядочные 
+# Одно множество может содержать значения любых типов, Если у вас два множество 
+# Вы можете совершать над ним любые стандартные операции, например объеденение,
+# пересечение  и разность. 
+
+color = {'red', 'green', 'blue'}
+print(color)
+color = {'red', 'green', 'blue'}
+color.add('red')
+print(color)
+color.add('grey')
+print(color)
+color.remove('red')
+print(color)
+color.discard('red')#проверяет, есть ли red, если есть, удаляет
+print(color)
+color.clear()#удаление полностью
+print(color)
+
+q=set() создание множество
