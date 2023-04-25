@@ -85,18 +85,53 @@ d['w'] = 'werty'
 # Вы можете совершать над ним любые стандартные операции, например объеденение,
 # пересечение  и разность. 
 
-color = {'red', 'green', 'blue'}
-print(color)
-color = {'red', 'green', 'blue'}
-color.add('red')
-print(color)
-color.add('grey')
-print(color)
-color.remove('red')
-print(color)
-color.discard('red')#проверяет, есть ли red, если есть, удаляет
-print(color)
-color.clear()#удаление полностью
-print(color)
+# color = {'red', 'green', 'blue'}
+# print(color)
+# color = {'red', 'green', 'blue'}
+# color.add('red')
+# print(color)
+# color.add('grey')
+# print(color)
+# color.remove('red')
+# print(color)
+# color.discard('red')#проверяет, есть ли red, если есть, удаляет
+# print(color)
+# color.clear()#удаление полностью
+# print(color)
 
-q=set() создание множество
+# q=set() #создание множество
+
+# операции с множествами
+
+# a={1, 2, 3, 4, 5}
+# b={2, 5, 6, 7, 2}
+# # c = a.copy()# копирование множество
+# # u = a.union(b) #объяденить множество уникальное значение
+# # i = a.intersection(b) # пересечение, тобишь одинаковые значения
+# # dl = a.difference(b)# разница а и б
+# q = a.union(b).difference(a.intersection(b))
+# print(q)
+
+# a = {1, 8, 6}
+# b = frozenset(a) # фиксация множество
+
+# List Comprehension
+# У каждого языка проограммирование есть свои особенности, и преймущества.
+# Одна из культовых фишет Python - list comprehension(генератор списка)
+# Comprehensions лугко читать и их используют как начинающие, так и опытные разработчики. list comprehension это упрощенный 
+# подход к созданию списка который задействует цикл for а также инструкции if else 
+# для опреедение того что в итоге окажется фатальном списке
+# 1. простая ситуация - список:
+# list_1 = [exp for item in iterebale]
+# 1. выбрать по ззаданному условию
+# list_1 = [exp for item in iterebale(if conditional)]
+
+# list_1 = [i for i in range(1,101)] # пополняем список 1 до 100
+# print(list_1)
+
+# list_1 = [i for i in range(1,101) if i % 2 == 0] # Добавили условие, на четные числа
+# print(list_1)
+
+list_1 = [(i,i) for i in range(1,101)] # можно создать кортеж
+print(list_1) 
+
