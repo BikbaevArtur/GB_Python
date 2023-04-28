@@ -77,8 +77,8 @@ d['w'] = 'werty'
 # for i in d:
 #     print('{}:{}' .format(i,d[i])) # 
 # #так де можно 
-# for (kay,val) in d.items():
-#     print(kay,val)
+for (kay,val) in d.items():
+    print(kay,val)
 
 #  Множество содержит в себе уникальные элементы, не обязательно упорядочные 
 # Одно множество может содержать значения любых типов, Если у вас два множество 
@@ -132,6 +132,6 @@ d['w'] = 'werty'
 # list_1 = [i for i in range(1,101) if i % 2 == 0] # Добавили условие, на четные числа
 # print(list_1)
 
-list_1 = [(i,i) for i in range(1,101)] # можно создать кортеж
-print(list_1) 
+# list_1 = [(i,i) for i in range(1,101)] # можно создать кортеж
+# print(list_1) 
 
