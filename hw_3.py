@@ -21,48 +21,48 @@
 #     6
 #     -> 5
 
-import random
+# import random
 
 
-def new_array(size):
-    array = [random.randint(1, 10) for i in range(size)]
-    return array
+# def new_array(size):
+#     array = [random.randint(1, 10) for i in range(size)]
+#     return array
 
 
-def search_num(array, num):
-    count = 0
+# def search_num(array, num):
+#     count = 0
 
-    for i in range(len(array)):
-        if array[i] == num:
-            count += 1
+#     for i in range(len(array)):
+#         if array[i] == num:
+#             count += 1
 
-    return count
-
-
-def nearest_num(array, num):
-    arr_length = len(array)
-    nearest_num = array[0]
-    diff = abs(num - nearest_num)
-    for i in range(1, arr_length):
-        curr_diff = abs(num - array[i])
-        if curr_diff < diff:
-            diff, nearest_num = curr_diff, array[i]
-
-    return nearest_num
+#     return count
 
 
-size = int(input("Input size list: "))
-num_search = int(input("Input num: "))
+# def nearest_num(array, num):
+#     arr_length = len(array)
+#     nearest_num = array[0]
+#     diff = abs(num - nearest_num)
+#     for i in range(1, arr_length):
+#         curr_diff = abs(num - array[i])
+#         if curr_diff < diff:
+#             diff, nearest_num = curr_diff, array[i]
 
-new_list = new_array(size)
-print(new_list)
-result = search_num(new_list, num_search)
+#     return nearest_num
 
-if result > 0:
-    print(f"число {num_search} встречается {result} раз")
-else:
-    nearest = nearest_num(new_list, num_search)
-    print(f"числа {num_search} нету в списке, ближайшее число {nearest}")
+
+# size = int(input("Input size list: "))
+# num_search = int(input("Input num: "))
+
+# new_list = new_array(size)
+# print(new_list)
+# result = search_num(new_list, num_search)
+
+# if result > 0:
+#     print(f"число {num_search} встречается {result} раз")
+# else:
+#     nearest = nearest_num(new_list, num_search)
+#     print(f"числа {num_search} нету в списке, ближайшее число {nearest}")
 
 
 # *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность.
@@ -92,4 +92,20 @@ else:
 # ноутбук
 #     12
 
-scrabble_list = [{ "1" :'A' 'E' 'I' 'O' 'U' 'L' 'N' 'S' 'T' 'R' 'А' 'В' 'Е' 'И' 'Н' 'О' 'Р' 'С' 'Т'}]
+scrabble = {1:'AEIOULNSTRАВЕИНОРСТ',
+            2:'DGДКЛМПУ',
+            3:'BCMPБГЁЬЯ',
+            4:'FHVWYЙЫ',
+            5:'KЖЗХЦЧ',
+            8:'JXШЭЮ',
+            10:'QZФЩЪ' }
+text = list(input("input text: ").upper())
+
+sum = 0
+for i in range(len(text)):
+    for kay,value in scrabble.items():
+        for letter in value:
+            if text[i] == letter:
+                sum += kay
+
+print(sum)
