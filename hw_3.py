@@ -30,11 +30,22 @@ def new_array(size):
 
 def serch_num(array, num):
     count = 0
-    num_1 = num
-    num_2 = num
+    nearest_num = array[1]
+    min_diff = num - array[1]
+    temp_diff = 0
     for i in range(len(array)):
         if array[i] == num:
             count += 1
+        else:
+            if 
+
+
+
+            
+            
+            
+            
+        
     return count
 
 
