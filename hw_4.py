@@ -4,20 +4,20 @@
 # Пользователь вводит 2 числа. n — кол-во элементов первого множества.
 #  m — кол-во элементов второго множества. Затем пользователь вводит сами элементы множеств.
 
-def new_list(size):
-    set_list = set()
-    for i in range(size):
-        set_list.add(input())
-    return set_list
+# def new_list(size):
+#     set_list = set()
+#     for i in range(size):
+#         set_list.add(input())
+#     return set_list
 
-print("Set_list_1 ")
-set_list_1 = new_list(5)
-print("Set list 2 ")
-set_list_2 = new_list(5)
-merge_set = set.union(set_list_1,set_list_2)
-print(set_list_1)
-print(set_list_2)
-print(merge_set)
+# print("Set_list_1 ")
+# set_list_1 = new_list(5)
+# print("Set list 2 ")
+# set_list_2 = new_list(5)
+# merge_set = set.union(set_list_1,set_list_2)
+# print(set_list_1)
+# print(set_list_2)
+# print(merge_set)
 
 
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику.
@@ -32,3 +32,5 @@ print(merge_set)
 # Напишите программу для нахождения максимального числа ягод,
 #  которое может собрать за один заход собирающий модуль, 
 # находясь перед некоторым кустом заданной во входном файле грядки.
+
+blackberries = {k for i in range (o)}

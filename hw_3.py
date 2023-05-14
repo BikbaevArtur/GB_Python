@@ -99,13 +99,12 @@ scrabble = {1:'AEIOULNSTRАВЕИНОРСТ',
             5:'KЖЗХЦЧ',
             8:'JXШЭЮ',
             10:'QZФЩЪ' }
-text = list(input("input text: ").upper())
+text = input("input text: ")
 
 sum = 0
-for i in range(len(text)):
+for letter in text.upper():
     for kay,value in scrabble.items():
-        for letter in value:
-            if text[i] == letter:
-                sum += kay
+        if letter in value:
+            sum += kay
 
 print(sum)
