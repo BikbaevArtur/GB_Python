@@ -37,6 +37,26 @@
 # Output: yes
 
 
-def inspect_num(num):
-    for i in range(num):
-        if num // i
+# def inspect_num(num):
+#     count = 0
+#     for i in range(1,num+1):
+#         if num % i == 0:
+#             count += 1
+#     return count
+
+number = int(input("input num: "))
+# result = inspect_num(number)
+# if result == 2:
+#     print("Простое число")
+# else:
+#     print("сложное число")
+
+def is_simple(num: int) -> bool:
+    if num in [1,2]:
+        return True
+    for i in range(3,num//2 +1 , 2):
+        if num%i ==0:
+            return False
+        return True
+
+print(is_simple(number))
