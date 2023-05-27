@@ -9,17 +9,29 @@
 # 3 1 3 4 2 4 12
 # 6
 # 4 15 43 1 15 1
-import random
 
-size_1 = int(input("Input size list_1: "))
-# size_2 = int(input("Input size list_2: "))
-list_1 = [random.randint(1, 10) for _ in range(size_1)]
-print(list_1)
-list_2 = [random.randint(1, 10) for _ in range(size_1)]
-print(list_2)
-list_3 = []
+# import random
 
-for i in range(size_1):
-    if list_1[i] in list_3:
-        list_3.append(list_1[i])
-print(list_3)
+# size_1 = int(input("Input size list_1: "))
+# # size_2 = int(input("Input size list_2: "))
+# list_1 = [random.randint(1, 10) for _ in range(size_1)]
+# print(list_1)
+# list_2 = [random.randint(1, 10) for _ in range(size_1)]
+# print(list_2)
+# list_3 = []
+
+# for item in list_1:
+#     if item not in list_2:
+#         list_3.append(item)
+# print(list_3)
+#можно так
+# list_3 = [i for i in list_1 if i not in list_2]
+
+# Задача №41. Решение в группах
+# Дан массив, состоящий из целых чисел. Напишите
+# программу, которая в данном массиве определит
+# количество элементов, у которых два соседних и, при
+# этом, оба соседних элемента меньше данного. Сначала
+# вводится число N — количество элементов в массиве
+# Далее записаны N чисел — элементы массива. Массив
+# состоит из целых чисел.
