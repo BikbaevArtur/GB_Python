@@ -116,7 +116,7 @@ def list_array(min_val, max_val, size):
 # выведена только один раз (перестановка чисел новую
 # пару не дает).
 
-k = int(input())
+# k = int(input())
 list_1 = []
 
 # def new_list(num):
@@ -134,11 +134,10 @@ def sum_list(number):
             sum += i
     return sum
 
-while(k < 300):
-    a1 = sum_list(k)
-    a2 = sum_list(a1)
-    if a1 == k and a2 == a1:
-        list_1.append(k)
-        list_1.append(a1)
+my_list = [i for i in range(10000)]
+print(my_list)
 
-print(list_1)
+for item in my_list:
+    if item == sum_list(sum_list(item)) and item != sum_list(item):
+        print(item, sum_list(sum_list(item)))
+
