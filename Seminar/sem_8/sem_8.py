@@ -20,10 +20,13 @@ path = 'phonebook.txt'
 # def menu_phonemook():
 #     print("1.Открыть файл \n2.Сохранить файл \n3.Показать тк \n4.Добавить контакнт \n5.Найти контакт \n6.Изменить контакт \n7.Удалить контакт \n8.Выход")
 #     button = input("Выберите пункт меню")
-#     while 
+#     while
+
+
 def creat_open_file():
     data = open(path, 'r', encoding='UTF-8')
     data.close
+
 
 def addint_intro_file():
     data = open(path, 'a', encoding='UTF-8')
@@ -33,25 +36,27 @@ def addint_intro_file():
     phone = input("Введите номер телефона: ").capitalize()
     data.write(f"{name} {middle_name} {sur_name} {phone}")
 
+
 def readint_file():
     data = open(path, 'r', encoding='UTF-8')
     print(data.read())
     data.close()
+
 
 def finding_contact_file():
     data = open(path, 'r', encoding='UTF-8')
     finding_contact = input("Введите искомый параметр: ")
     i_find_it = data.readlines()
     dict_contacts = {}
-    for i, j in enumerate(i_find_it,1):
+    for i, j in enumerate(i_find_it, 1):
         j = j.strip()
-        dict_contacts = {'name': i_find_it[0], 'middle_name': i_find_it[1], 'sur_name' : i_find_it[2], 'phone': i_find_it[3] }
+        dict_contacts = {'name': i_find_it[0], 'middle_name': i_find_it[1],
+                         'sur_name': i_find_it[2], 'phone': i_find_it[3]}
     for item in i_find_it:
-        if item  == finding_contact:
+        if item == finding_contact:
             print()
 
 # menu_phonemook()
-
 
 
 # path = 'phonebook.txt'
